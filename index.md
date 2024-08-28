@@ -12,6 +12,8 @@ This is a heading inside of code scaffolding
 
 ## Investing in Your Technical Future XXXYY
 
+Aaryav Lal
+
 ### Markdown samples [{markdown cheat sheet]][(](https://www.markdownguide.org/getting-started/)url)
 Using markdown from index.md. We are learning markdown. 
 
