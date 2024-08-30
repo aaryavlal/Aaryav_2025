@@ -2,7 +2,8 @@
 layout: base
 title: Student Home 
 description: Home Page
-image: /images/mario_animation.png
+image: ![image](https://github.com/user-attachments/assets/3a892214-cb80-4ab1-b437-f25149577f17)
+
 hide: true
 ---
 
