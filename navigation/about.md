@@ -84,6 +84,14 @@ Here is what I did through my early life
 - Went to T.K. and kindergaden in Irvine
 - Moved to Bay Area at 7
 - Lived in Bay Area from 1'st to 6'th grade
-- Moved to San Diego and graduataing from Del Norte 2028 
+- Moved to San Diego and graduataing from Del Norte 2028
+- 
+
+
+### Culture & Family
+
+- My parents are both North Indian and moved here in the early 2000's
+- My grandparents are in India so I go to visit them once a year
+- I think India is awesome place to be 
 
 
