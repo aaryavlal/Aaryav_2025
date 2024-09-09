@@ -73,3 +73,17 @@ Aaryav Lal
         container.appendChild(gridItem);
     }
 </script>
+
+
+### Journey through Life
+
+Here is what I did through my early life 
+
+- Born in Ocean Side, San Diego
+- Moved to Irvine at 4
+- Went to T.K. and kindergaden in Irvine
+- Moved to Bay Area at 7
+- Lived in Bay Area from 1'st to 6'th grade
+- Moved to San Diego and graduataing from Del Norte 2028 
+
+
