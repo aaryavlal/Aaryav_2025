@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Creator of Student 2025
+Aaryav Lal
 
 <style>
     /* Style looks pretty compact, trace grid-container and grid-item in the code */
@@ -38,7 +38,7 @@ Creator of Student 2025
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var living_in_the_world = [
-        {"flag": "a/a0/Flag_of_India_%283-5%29.svg/640px-Flag_of_India_%283-5%29.svg.png", "greeting": "Namaste", "description": "California - forever"},
+        {"flag": "Flag_of_India_(3-5).svg", "greeting": "Namaste", "description": "India - Ethnicity"},
         {"flag": "b/b9/Flag_of_Oregon.svg", "greeting": "Hi", "description": "Oregon - 9 years"},
         {"flag": "b/be/Flag_of_England.svg", "greeting": "Alright mate", "description": "England - 2 years"},
         {"flag": "e/ef/Flag_of_Hawaii.svg", "greeting": "Aloha", "description": "Hawaii - 2 years"},
