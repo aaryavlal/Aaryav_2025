@@ -38,7 +38,7 @@ Aaryav Lal
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var living_in_the_world = [
-        {"flag": "a/a0Flag_of_India_%283-5%29.svg", "greeting": "Namaste", "description": "India - Ethnicity"},
+        {"flag": "8/88/Flag_of_India_%282-1%29.svg", "greeting": "Namaste", "description": "India - Ethnicity"},
         {"flag": "0/01/Flag_of_California.svg", "greeting": "Hi", "description": "Born here"},
         {"flag": "a/a4/Flag_of_the_United_States.svg", "greeting": "Hello", "description": "My nationality"},
     ]; 
