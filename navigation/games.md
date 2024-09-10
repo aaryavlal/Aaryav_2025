@@ -40,9 +40,34 @@ permalink: /games/
 
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
-    var living_in_the_world = [
-        {"flag": "7/79/Call_of_Duty_Black_Ops_2_Logo.svg", "description": "Call of duty black ops II"},
-        {"flag": "f/fc/Valorant_logo_-_pink_color_version.svg", "description": "Valorant"},
-        {"flag": "3/3a/Roblox_player_icon_black.svg", "description": "Roblox"},
+    var games = [
+        {"game": "7/79/Call_of_Duty_Black_Ops_2_Logo.svg", "description": "Call of duty black ops II"},
+        {"game": "f/fc/Valorant_logo_-_pink_color_version.svg", "description": "Valorant"},
+        {"Game": "3/3a/Roblox_player_icon_black.svg", "description": "Roblox"},
     ]; 
+ for (const location of games) {
+        // Create a "div" with "class grid-item" for each row
+        var gridItem = document.createElement("div");
+        gridItem.className = "grid-item";  // This class name connects the gridItem to the CSS style elements
+        // Add "img" HTML tag for the flag
+        var img = document.createElement("img");
+        img.src = http_source + location.game; // concatenate the source and flag
+        img.alt = location.game + " GAME"; // add alt text for accessibility
+
+        // Add "p" HTML tag for the description
+        var description = document.createElement("p");
+        description.textContent = location.description; // extract the description
+
+   // extract the greeting
+
+        // Append img and p HTML tags to the grid item DIV
+        gridItem.appendChild(img);
+        gridItem.appendChild(description);
+        gridItem.appendChild(greeting);
+
+        // Append the grid item DIV to the container DIV
+        container.appendChild(gridItem);
+    }
+</script>
+
 
