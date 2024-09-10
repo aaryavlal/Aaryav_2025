@@ -10,6 +10,7 @@ New kasm test xxx
 
 
 <!-- Liquid:  statements -->
+[Games](/navigation/games.md)
 
 <!-- Include submenu from _includes to top of pages -->
 {% include nav/home.html %}
