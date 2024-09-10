@@ -5,7 +5,34 @@ search_exclude: true
 permalink: /games/
 ---
 
-###Games I enjoy playing
+### Games I enjoy playing
+
+<style>
+    /* Style looks pretty compact, trace grid-container and grid-item in the code */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Dynamic columns */
+        gap: 10px;
+    }
+    .grid-item {
+        text-align: center;
+    }
+    .grid-item img {
+        width: 100%;
+        height: 100px; /* Fixed height for uniformity */
+        object-fit: contain; /* Ensure the image fits within the fixed height */
+    }
+    .grid-item p {
+        margin: 5px 0; /* Add some margin for spacing */
+    }
+</style>
+
+<!-- This grid_container class is for the CSS styling, the id is for JavaScript connection -->
+<div class="grid-container" id="grid_container">
+    <!-- content will be added here by JavaScript -->
+</div>
+
+<script>
 
 <script>
     // 1. Make a connection to the HTML container defined in the HTML div
