@@ -12,7 +12,7 @@ New kasm test xxx
 <!-- Liquid:  statements -->
 
 <!-- Include submenu from _includes to top of pages -->
-{% include nav/games.md %}
+{% include navigation/games.md %}
 {% include nav/home.html %}
 <!--- Concatenation of site URL to frontmatter image  --->
 {% assign sprite_file = site.baseurl | append: page.image %}
