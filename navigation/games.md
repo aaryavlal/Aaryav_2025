@@ -7,8 +7,8 @@ images: /images/BO6_LP-meta_image.jpg
 ---
 
 ### Games I enjoy playing
- var container = document.getElementById("grid_container");
 
-<img src="/images/BO6_LP-meta_image.jpg" alt="Call of Duty Black Ops 6">
+<img src="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blackops6/meta/BO6_LP-meta_image.jpg" alt="Call of Duty®: Black Ops 6" height = 100px >
+ height = 200px>
 
 
