@@ -200,22 +200,17 @@ New kasm test xxx
 
 
 My journey starts here.
-
-
-This is a heading inside of code scaffolding 
-
-## Investing in Your Technical Future XXXYY
-
 Aaryav Lal
 
-### Markdown samples [{markdown cheat sheet]][(](https://www.markdownguide.org/getting-started/)url)
+### Investing in Your Technical Future 
+
+## Markdown samples 
 Using markdown from index.md. We are learning markdown. 
 
-```markdown
 
 
-> Explore the Computer Science Pathway at Del Norte High School and invest in your technical skills. All Del Norte CompSci classes are designed to provide a real-world development experience. Class time includes tech talks (lectures), peer collaboration, communication with teachers, critical thinking while coding, and creativity in projects. Grading is focused on time invested, participation with peers, and engagement in learning.
-```
+
+Explore the Computer Science Pathway at Del Norte High School and invest in your technical skills. All Del Norte CompSci classes are designed to provide a real-world development experience. Class time includes tech talks (lectures), peer collaboration, communication with teachers, critical thinking while coding, and creativity in projects. Grading is focused on time invested, participation with peers, and engagement in learning.
 
 - Introduction to concepts and requirements by the teacher
 - Project-based learning with teacher support, performing Agile/Scrum development
