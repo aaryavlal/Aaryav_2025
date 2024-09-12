@@ -5,7 +5,7 @@ github_username: nighthawkcoders
 github_repo: "Aaryav_2025" 
 baseurl: "/Aaryav_2025"
 future: true
-remote_theme: jekyll/minima
+remote_theme: jekyll/time-machine
 minima:
   skin: dark
   social_links:
