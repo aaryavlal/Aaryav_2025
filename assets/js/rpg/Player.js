@@ -255,4 +255,8 @@ class Player {
     }
 }
 
+<<<<<<< HEAD
 export default Player;
+=======
+export default Player;
+>>>>>>> b8e8445 (sub menu)

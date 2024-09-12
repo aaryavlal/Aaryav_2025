@@ -43,4 +43,8 @@ const GameControl = {
 // Detect window resize events and call the resize function.
 window.addEventListener('resize', GameControl.resize.bind(GameControl));
 
+<<<<<<< HEAD
 export default GameControl;
+=======
+export default GameControl;
+>>>>>>> b8e8445 (sub menu)
