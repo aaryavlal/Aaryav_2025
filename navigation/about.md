@@ -96,9 +96,9 @@ Here is what I did through my early life
 
 
 
-  <a href="https://aaryavlal.github.io/Aaryav_2025/navigation/ideas" 
+  <a href="https://aaryavlal.github.io/Aaryav_2025/games/" 
    style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #007BFF; text-align: center; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
-   Go to Ideas Page
+   Go to Games Page
 </a>
 
 
