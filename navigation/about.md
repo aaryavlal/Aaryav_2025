@@ -92,6 +92,13 @@ Here is what I did through my early life
 
 - My parents are both North Indian and moved here in the early 2000's
 - My grandparents are in India so I go to visit them once a year
-- I think India is awesome place to be 
+- I think India is awesome place to be
+
+
+
+  <a href="https://aaryavlal.github.io/Aaryav_2025/navigation/ideas" 
+   style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #007BFF; text-align: center; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+   Go to Ideas Page
+</a>
 
 
