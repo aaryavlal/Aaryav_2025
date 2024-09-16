@@ -220,6 +220,11 @@ Explore the Computer Science Pathway at Del Norte High School and invest in your
 - Focus on tehnical communications through project presentations and student led teaching
 - Grades are on projects, learnt concepts, and live reviews between student(s) and teacher
 
-```
-![image](https://github.com/user-attachments/assets/095af3d2-27a3-4c4a-a84b-19861b2c0984)
-
+<script src="https://utteranc.es/client.js"
+        repo="{{ site.github_username }}/{{ site.github_repo | default: site.baseurl | remove: "/" }}"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
