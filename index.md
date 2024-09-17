@@ -221,7 +221,7 @@ Explore the Computer Science Pathway at Del Norte High School and invest in your
 - Grades are on projects, learnt concepts, and live reviews between student(s) and teacher
 
 <script src="https://utteranc.es/client.js"
-        repo="aaryaval/Aaryav_2025"
+        repo="aaryavlal/Aaryav_2025"
         issue-term="title"
         label="blogpost-comment"
         theme="github-light"
