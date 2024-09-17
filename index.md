@@ -224,7 +224,7 @@ Explore the Computer Science Pathway at Del Norte High School and invest in your
         repo="{{ site.github_username }}/{{ site.github_repo | default: site.baseurl | remove: "/" }}"
         issue-term="title"
         label="blogpost-comment"
-        theme="github-light"
+        theme="github-midnight"
         crossorigin="anonymous"
         async>
 </script>
