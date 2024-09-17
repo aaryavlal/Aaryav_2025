@@ -228,6 +228,3 @@ Explore the Computer Science Pathway at Del Norte High School and invest in your
         crossorigin="anonymous"
         async>
 </script>
-
-
-
