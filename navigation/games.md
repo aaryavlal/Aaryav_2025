@@ -14,3 +14,12 @@ images: /images/BO6_LP-meta_image.jpg
 ## Why these games interest me
 
 Both of these games have unique graphic styles and I can tell how long it must have taken to code them. The way the character moves and the way the gun shoots makes me want to learn how the code actually works and how long it takes to make it. 
+
+<script src="https://utteranc.es/client.js"
+        repo="aaryavlal/Aaryav_2025"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
