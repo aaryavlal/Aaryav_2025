@@ -39,8 +39,3 @@ permalink: /rpg/
 
     // Start game engine
     GameControl.start(assets);
-<<<<<<< HEAD
-</script>
-=======
-</script>
->>>>>>> b8e8445 (sub menu)
