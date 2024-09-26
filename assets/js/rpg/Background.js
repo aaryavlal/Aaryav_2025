@@ -30,8 +30,5 @@ export class Background {
     }
 }
 
-<<<<<<< HEAD
 export default Background;
-=======
-export default Background;
->>>>>>> b8e8445 (sub menu)
+
