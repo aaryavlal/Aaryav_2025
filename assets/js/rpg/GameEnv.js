@@ -120,8 +120,6 @@ class GameEnv {
     }
 }
 
-<<<<<<< HEAD
 export default GameEnv;
-=======
-export default GameEnv;
->>>>>>> b8e8445 (sub menu)
+
+
