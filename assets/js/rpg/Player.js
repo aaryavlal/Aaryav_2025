@@ -75,8 +75,8 @@ class Player {
         this.direction = 'down'; // Initial direction
 
         // Set frame dimensions based on sprite sheet data
-        this.frameWidth = 72 / this.spriteData.data.COLUMNS; // Width of each frame
-        this.frameHeight = 128 / this.spriteData.data.ROWS; // Height of each frame
+       // this.frameWidth = 72 / this.spriteData.data.COLUMNS; // Width of each frame
+       // this.frameHeight = 128 / this.spriteData.data.ROWS; // Height of each frame
 
         // Initialize the direction data for animation
         this.directionData = {
