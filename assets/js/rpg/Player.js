@@ -118,27 +118,23 @@ if (sprite) {
      * 
      * This method renders the player using the sprite sheet if provided, otherwise a red square.
      */
-    draw() {
+   draw() {
     if (this.spriteSheet) {
-        // Sprite Sheet frame size: pixels = total pixels / total frames
-        const frameWidth = 72 / 3;  // 72 total width, 3 columns
-        const frameHeight = 128 / 4;  // 128 total height, 4 rows
+        // Each frame size: 24x32 pixels (72/3 columns, 128/4 rows)
+        const frameWidth = 24;  // Frame width
+        const frameHeight = 32;  // Frame height
 
-        // Sprite Sheet direction data source (e.g., front, left, right, back)
+        // Get the direction data (e.g., front, left, right, back)
         const directionData = this.spriteData[this.direction];
 
-        // Sprite Sheet x and y declarations to store coordinates of current frame
-        let frameX, frameY;
+        // Calculate the X and Y position of the current frame in the sprite sheet
+        let frameX = (directionData.start + this.frameIndex) * frameWidth;  // X coordinate of the frame
+        let frameY = directionData.row * frameHeight;  // Y coordinate of the frame (which row)
 
-        // Calculate the frame's X position on the sprite sheet
-        frameX = (directionData.start + this.frameIndex) * frameWidth;  // Horizontal position in pixels
-        // Calculate the frame's Y position on the sprite sheet
-        frameY = directionData.row * frameHeight;  // Vertical position in pixels (row)
-
-        // Draw the current frame of the sprite sheet
+        // Draw the current frame of the sprite sheet on the canvas
         GameEnv.ctx.drawImage(
             this.spriteSheet,
-            frameX, frameY, frameWidth, frameHeight, // Source rectangle (the frame to crop)
+            frameX, frameY, frameWidth, frameHeight, // Source rectangle (the frame to crop from the sprite sheet)
             this.position.x, this.position.y, this.width, this.height // Destination rectangle (where to draw on the canvas)
         );
 
