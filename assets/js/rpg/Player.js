@@ -48,32 +48,30 @@ class Player {
         // Initialize the player's scale based on the game environment
         this.scale = { width: GameEnv.innerWidth, height: GameEnv.innerHeight };
 
-        // Check if sprite data is provided
-        if (sprite) {
-            this.scaleFactor = sprite.data.SCALE_FACTOR || SCALE_FACTOR;
-            this.stepFactor = sprite.data.STEP_FACTOR || STEP_FACTOR;
-            this.animationRate = sprite.data.ANIMATION_RATE || ANIMATION_RATE;
-    
-            // Load the sprite sheet
-            this.spriteSheet = new Image();
-            this.spriteSheet.src = sprite.src;
+     const sprite = {
+    src: 'images/rpg/turtle.png', // Path to turtle.png
+    data: {
+        SCALE_FACTOR: 2,        // Example scale factor
+        STEP_FACTOR: 5,         // Example step factor
+        ANIMATION_RATE: 100,    // Example animation rate
+    }
+};
 
-            // Initialize animation properties
-            this.frameIndex = 0; // index reference to current frame
-            this.frameCounter = 0; // count each frame rate refresh
-            this.direction = 'down'; // Initial direction
-            this.spriteData = sprite.data;
-        } else {
-            // Default to red square
-            this.scaleFactor = SCALE_FACTOR;
-            this.stepFactor = STEP_FACTOR;
-            this.animationRate = ANIMATION_RATE;
-            // No sprite sheet for default
-            this.spriteSheet = null;
-        }
+if (sprite) {
+    this.scaleFactor = sprite.data.SCALE_FACTOR || SCALE_FACTOR;
+    this.stepFactor = sprite.data.STEP_FACTOR || STEP_FACTOR;
+    this.animationRate = sprite.data.ANIMATION_RATE || ANIMATION_RATE;
 
-        // Set the initial size of the player
-        this.size = GameEnv.innerHeight / this.scaleFactor;
+    // Load the sprite sheet
+    this.spriteSheet = new Image();
+    this.spriteSheet.src = sprite.src;  // Now it loads turtle.png
+
+    // Initialize animation properties
+    this.frameIndex = 0; // index reference to current frame
+    this.frameCounter = 0; // count each frame rate refresh
+    this.direction = 'down'; // Initial direction
+    this.spriteData = sprite.data;
+}
 
         // Initialize the player's position and velocity
         this.position = { x: 0, y: GameEnv.innerHeight - this.size };
@@ -121,26 +119,28 @@ class Player {
      * This method renders the player using the sprite sheet if provided, otherwise a red square.
      */
     draw() {
-        if (this.spriteSheet) {
-            // Sprite Sheet frame size: pixels = total pixels / total frames
-            const frameWidth = this.spriteData.pixels.width / this.spriteData.orientation.columns;
-            const frameHeight = this.spriteData.pixels.height / this.spriteData.orientation.rows;
+    if (this.spriteSheet) {
+        // Sprite Sheet frame size: pixels = total pixels / total frames
+        const frameWidth = 72 / 3;  // 72 total width, 3 columns
+        const frameHeight = 128 / 4;  // 128 total height, 4 rows
 
-            // Sprite Sheet direction data source (e.g., front, left, right, back)
-            const directionData = this.spriteData[this.direction];
+        // Sprite Sheet direction data source (e.g., front, left, right, back)
+        const directionData = this.spriteData[this.direction];
 
-            // Sprite Sheet x and y declarations to store coordinates of current frame
-            let frameX, frameY;
-            // Sprite Sheet x and y current frame: coordinate = (index) * (pixels)
-            frameX = (directionData.start + this.frameIndex) * frameWidth;
-            frameY = directionData.row * frameHeight;
+        // Sprite Sheet x and y declarations to store coordinates of current frame
+        let frameX, frameY;
 
-            // Draw the current frame of the sprite sheet
-            GameEnv.ctx.drawImage(
-                this.spriteSheet,
-                frameX, frameY, frameWidth, frameHeight, // Source rectangle
-                this.position.x, this.position.y, this.width, this.height // Destination rectangle
-            );
+        // Calculate the frame's X position on the sprite sheet
+        frameX = (directionData.start + this.frameIndex) * frameWidth;  // Horizontal position in pixels
+        // Calculate the frame's Y position on the sprite sheet
+        frameY = directionData.row * frameHeight;  // Vertical position in pixels (row)
+
+        // Draw the current frame of the sprite sheet
+        GameEnv.ctx.drawImage(
+            this.spriteSheet,
+            frameX, frameY, frameWidth, frameHeight, // Source rectangle (the frame to crop)
+            this.position.x, this.position.y, this.width, this.height // Destination rectangle (where to draw on the canvas)
+        );
 
             // Update the frame index for animation at a slower rate
             this.frameCounter++;
