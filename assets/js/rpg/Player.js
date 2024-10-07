@@ -1,7 +1,7 @@
 import GameEnv from './GameEnv.js';
 
 // Define non-mutable constants as defaults
-const SCALE_FACTOR = 25; // 1/nth of the height of the canvas
+const SCALE_FACTOR = 100; // 1/nth of the height of the canvas
 const STEP_FACTOR = 100; // 1/nth, or N steps up and across the canvas
 const ANIMATION_RATE = 10; // Number of frames to wait before changing the animation frame
 
@@ -23,10 +23,10 @@ class Player {
             src: 'images/rpg/turtle.png',  // Path to the turtle.png sprite sheet
             pixels: { width: 256, height: 280 },  // Size of the entire sprite sheet
             orientation: { columns: 3, rows: 4 }, // 3x4 grid of frames
-            down: { start: 0, row: 0, columns: 3 },  // Row 0, 3 frames for "down" animation
-            left: { start: 0, row: 1, columns: 3 },  // Row 1, 3 frames for "left" animation
-            right: { start: 0, row: 2, columns: 3 }, // Row 2, 3 frames for "right" animation
-            up: { start: 0, row: 3, columns: 3 }     // Row 3, 3 frames for "up" animation
+            up: { start: 0, row: 0, columns: 3 },     // Row 3, 3 frames for "up" animation
+            down: { start: 0, row: 2, columns: 3 },  // Row 0, 3 frames for "down" animation
+            left: { start: 0, row: 3, columns: 3 },  // Row 1, 3 frames for "left" animation
+            right: { start: 0, row: 1, columns: 3 } // Row 2, 3 frames for "right" animation
         };
 
         // Use provided data or fallback to default
