@@ -3,40 +3,10 @@ import GameEnv from './GameEnv.js';
 // Define non-mutable constants as defaults
 const SCALE_FACTOR = 25; // 1/nth of the height of the canvas
 const STEP_FACTOR = 100; // 1/nth, or N steps up and across the canvas
-const ANIMATION_RATE = 1; // 1/nth of the frame rate
+const ANIMATION_RATE = 10; // Number of frames to wait before changing the animation frame
 
 /**
- * Player is a dynamic class that manages the data and events for a player object.
- * 
- * The focus of this class is to handle the player's state, rendering, and key events.
- * 
- * This class uses a classic Java class pattern which is nice for managing object data and events.
- * 
- * The classic Java class pattern provides a structured way to define the properties and methods
- * associated with the player. This approach helps encapsulate the player's state and behavior,
- * making the code more modular and easier to maintain. By using this pattern, we can create
- * multiple instances of the Player class, each with its own state and behavior.
- * 
- * @abstract Player
- * @property {Object} position - The current position of the player.
- * @property {Object} velocity - The current velocity of the player.
- * @property {Object} scale - The scale of the player based on the game environment.
- * @property {number} size - The size of the player.
- * @property {number} width - The width of the player.
- * @property {number} height - The height of the player.
- * @property {number} xVelocity - The velocity of the player along the x-axis.
- * @property {number} yVelocity - The velocity of the player along the y-axis.
- * @property {Image} spriteSheet - The sprite sheet image for the player.
- * @property {number} frameIndex - The current frame index for animation.
- * @property {number} frameCount - The total number of frames for each direction.
- * @property {Object} spriteData - The data for the sprite sheet.
- * @property {number} frameCounter - Counter to control the animation rate.
- * @method resize - Resizes the player based on the game environment.
- * @method draw - Draws the player on the canvas.
- * @method update - Updates the player's position and ensures it stays within the canvas boundaries.
- * @method bindEventListeners - Binds key event listeners to handle player movement.
- * @method handleKeyDown - Handles key down events to change the player's velocity.
- * @method handleKeyUp - Handles key up events to stop the player's velocity.
+ * Player class handles the player state, rendering, and key events.
  */
 class Player {
     /**
@@ -48,29 +18,40 @@ class Player {
         // Initialize the player's scale based on the game environment
         this.scale = { width: GameEnv.innerWidth, height: GameEnv.innerHeight };
 
-        // Check if sprite data is provided
-        if (data) {
-            this.scaleFactor = data.SCALE_FACTOR || SCALE_FACTOR;
-            this.stepFactor = data.STEP_FACTOR || STEP_FACTOR;
-            this.animationRate = data.ANIMATION_RATE || ANIMATION_RATE;
-    
-            // Load the sprite sheet
-            this.spriteSheet = new Image();
-            this.spriteSheet.src = data.src;
+        // Set up the turtle sprite data
+        this.spriteData = {
+            src: 'images/rpg/turtle.png', // Path to turtle.png
+            pixels: { width: 72, height: 128 }, // Total width and height of the sprite sheet
+            orientation: { columns: 3, rows: 4 }, // 3 columns, 4 rows (24x32 frames)
+            directions: {
+                down: { start: 0, row: 0, columns: 3 },   // Down-facing animation frames
+                left: { start: 0, row: 1, columns: 3 },   // Left-facing animation frames
+                right: { start: 0, row: 2, columns: 3 },  // Right-facing animation frames
+                up: { start: 0, row: 3, columns: 3 },     // Up-facing animation frames
+            },
+            SCALE_FACTOR: 2,  // Scale factor for enlarging the sprite
+            STEP_FACTOR: STEP_FACTOR,  // Default step factor
+            ANIMATION_RATE: ANIMATION_RATE  // Animation speed
+        };
 
-            // Initialize animation properties
-            this.frameIndex = 0; // index reference to current frame
-            this.frameCounter = 0; // count each frame rate refresh
-            this.direction = 'down'; // Initial direction
-            this.spriteData = data;
-        } else {
-            // Default to red square
-            this.scaleFactor = SCALE_FACTOR;
-            this.stepFactor = STEP_FACTOR;
-            this.animationRate = ANIMATION_RATE;
-            // No sprite sheet for default
-            this.spriteSheet = null;
+        // Override sprite data if provided
+        if (data) {
+            this.spriteData = { ...this.spriteData, ...data };
         }
+
+        // Load the sprite sheet
+        this.spriteSheet = new Image();
+        this.spriteSheet.src = this.spriteData.src;
+
+        // Initialize animation properties
+        this.frameIndex = 0; // Index reference to the current frame
+        this.frameCounter = 0; // Counter to track animation frame rate
+        this.direction = 'down'; // Initial direction
+
+        // Set initial size and scale factors
+        this.scaleFactor = this.spriteData.SCALE_FACTOR || SCALE_FACTOR;
+        this.stepFactor = this.spriteData.STEP_FACTOR || STEP_FACTOR;
+        this.animationRate = this.spriteData.ANIMATION_RATE || ANIMATION_RATE;
 
         // Set the initial size of the player
         this.size = GameEnv.innerHeight / this.scaleFactor;
@@ -79,112 +60,92 @@ class Player {
         this.position = { x: 0, y: GameEnv.innerHeight - this.size };
         this.velocity = { x: 0, y: 0 };
 
-        // Set the initial size and velocity of the player
+        // Set the player's width and height to match the frame size
+        this.frameWidth = this.spriteData.pixels.width / this.spriteData.orientation.columns; // 72 / 3 = 24
+        this.frameHeight = this.spriteData.pixels.height / this.spriteData.orientation.rows;  // 128 / 4 = 32
+
         this.resize();
 
-        // Bind event listeners to allow object movement
+        // Bind event listeners for player movement
         this.bindEventListeners();
     }
 
     /**
      * Resizes the player based on the game environment.
-     * 
-     * This method adjusts the player's size and velocity based on the scale of the game environment.
-     * It also adjusts the player's position proportionally based on the previous and current scale.
      */
     resize() {
-        // Calculate the new scale resulting from the window resize
         const newScale = { width: GameEnv.innerWidth, height: GameEnv.innerHeight };
 
         // Adjust the player's position proportionally
         this.position.x = (this.position.x / this.scale.width) * newScale.width;
         this.position.y = (this.position.y / this.scale.height) * newScale.height;
 
-        // Update the player's scale to the new scale
+        // Update the scale
         this.scale = newScale;
 
-        // Recalculate the player's size based on the new scale
-        this.size = this.scale.height / this.scaleFactor; 
-
-        // Recalculate the player's velocity steps based on the new scale
+        // Recalculate the size and velocity
+        this.size = this.scale.height / this.scaleFactor;
         this.xVelocity = this.scale.width / this.stepFactor;
         this.yVelocity = this.scale.height / this.stepFactor;
 
-        // Set the player's width and height to the new size (object is a square)
-        this.width = this.size;
-        this.height = this.size;
+        // Set the player's width and height based on the frame size and scale factor
+        this.width = this.frameWidth * this.scaleFactor;
+        this.height = this.frameHeight * this.scaleFactor;
     }
 
     /**
      * Draws the player on the canvas.
-     * 
-     * This method renders the player using the sprite sheet if provided, otherwise a red square.
      */
     draw() {
         if (this.spriteSheet) {
-            // Sprite Sheet frame size: pixels = total pixels / total frames
-            const frameWidth = this.spriteData.pixels.width / this.spriteData.orientation.columns;
-            const frameHeight = this.spriteData.pixels.height / this.spriteData.orientation.rows;
+            // Calculate the current frame coordinates in the sprite sheet
+            const directionData = this.spriteData.directions[this.direction];
+            const frameX = (directionData.start + this.frameIndex) * this.frameWidth;
+            const frameY = directionData.row * this.frameHeight;
 
-            // Sprite Sheet direction data source (e.g., front, left, right, back)
-            const directionData = this.spriteData[this.direction];
-
-            // Sprite Sheet x and y declarations to store coordinates of current frame
-            let frameX, frameY;
-            // Sprite Sheet x and y current frame: coordinate = (index) * (pixels)
-            frameX = (directionData.start + this.frameIndex) * frameWidth;
-            frameY = directionData.row * frameHeight;
-
-            // Draw the current frame of the sprite sheet
+            // Draw the current frame of the sprite on the canvas
             GameEnv.ctx.drawImage(
                 this.spriteSheet,
-                frameX, frameY, frameWidth, frameHeight, // Source rectangle
-                this.position.x, this.position.y, this.width, this.height // Destination rectangle
+                frameX, frameY, this.frameWidth, this.frameHeight, // Source (sprite sheet)
+                this.position.x, this.position.y, this.width, this.height // Destination (canvas)
             );
 
-            // Update the frame index for animation at a slower rate
+            // Increment frameCounter and update animation frame if needed
             this.frameCounter++;
-            if (this.frameCounter % this.animationRate === 0) {
-                this.frameIndex = (this.frameIndex + 1) % directionData.columns;
+            if (this.frameCounter >= this.animationRate) {
+                this.frameCounter = 0;
+                this.frameIndex = (this.frameIndex + 1) % directionData.columns; // Loop through frames
             }
         } else {
-            // Draw default red square
+            // Default to drawing a red square if no sprite is loaded
             GameEnv.ctx.fillStyle = 'red';
             GameEnv.ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
         }
     }
 
     /**
-     * Updates the player's position and ensures it stays within the canvas boundaries.
-     * 
-     * This method updates the player's position based on its velocity and ensures that the player
-     * stays within the boundaries of the canvas.
+     * Updates the player's position and ensures it stays within canvas boundaries.
      */
     update() {
-        // Update begins by drawing the player object
         this.draw();
 
-        // Update or change position according to velocity events
+        // Update position based on velocity
         this.position.x += this.velocity.x;
         this.position.y += this.velocity.y;
 
-        // Ensure the player stays within the canvas boundaries
-        // Bottom of the canvas
+        // Ensure player stays within canvas boundaries
         if (this.position.y + this.height > GameEnv.innerHeight) {
             this.position.y = GameEnv.innerHeight - this.height;
             this.velocity.y = 0;
         }
-        // Top of the canvas
         if (this.position.y < 0) {
             this.position.y = 0;
             this.velocity.y = 0;
         }
-        // Right of the canvas
         if (this.position.x + this.width > GameEnv.innerWidth) {
             this.position.x = GameEnv.innerWidth - this.width;
             this.velocity.x = 0;
         }
-        // Left of the canvas
         if (this.position.x < 0) {
             this.position.x = 0;
             this.velocity.x = 0;
@@ -193,36 +154,19 @@ class Player {
 
     /**
      * Binds key event listeners to handle player movement.
-     * 
-     * This method binds keydown and keyup event listeners to handle player movement.
-     * The .bind(this) method ensures that 'this' refers to the player object.
      */
     bindEventListeners() {
         addEventListener('keydown', this.handleKeyDown.bind(this));
         addEventListener('keyup', this.handleKeyUp.bind(this));
     }
 
-    /**
-     * Handles key down events to change the player's velocity.
-     * 
-     * This method updates the player's velocity based on the key pressed.
-     * 
-     * @param {Object} event - The keydown event object.
-     * @abstract
-     */
     handleKeyDown({ keyCode }) {
+        // Movement logic here (e.g., arrow keys to move and set direction)
         throw new Error('Method "handleKeyDown()" must be implemented');
     }
 
-    /**
-     * Handles key up events to stop the player's velocity.
-     * 
-     * This method stops the player's velocity based on the key released.
-     * 
-     * @param {Object} event - The keyup event object.
-     * @abstract
-     */
     handleKeyUp({ keyCode }) {
+        // Stop movement logic here
         throw new Error('Method "handleKeyUp()" must be implemented');
     }
 }
