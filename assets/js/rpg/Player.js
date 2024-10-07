@@ -1,9 +1,9 @@
 import GameEnv from './GameEnv.js';
 
 // Define non-mutable constants as defaults
-const SCALE_FACTOR = 100; // 1/nth of the height of the canvas
-const STEP_FACTOR = 5; // 1/nth, or N steps up and across the canvas
-const ANIMATION_RATE = 10; // Number of frames to wait before changing the animation frame
+const SCALE_FACTOR = 5; // 1/nth of the height of the canvas
+const STEP_FACTOR = 1000; // 1/nth, or N steps up and across the canvas
+const ANIMATION_RATE = 50; // Number of frames to wait before changing the animation frame
 
 /**
  * Player class handles the player state, rendering, and key events.
