@@ -140,4 +140,59 @@ class Player {
             this.velocity.x = 0;
         }
     }
+/**
+     * Binds key event listeners to handle player movement.
+     */
+    bindEventListeners() {
+        addEventListener('keydown', this.handleKeyDown.bind(this));
+        addEventListener('keyup', this.handleKeyUp.bind(this));
+    }
+
+    /**
+     * Handles key down events for movement based on WASD keys.
+     * 
+     * W = Up, A = Left, S = Down, D = Right
+     * 
+     * @param {Object} event - The keydown event object.
+     */
+    handleKeyDown({ keyCode }) {
+        switch (keyCode) {
+            case 87: // 'W' key
+                this.velocity.y = -this.yVelocity; // Move up
+                this.direction = 'up';
+                break;
+            case 65: // 'A' key
+                this.velocity.x = -this.xVelocity; // Move left
+                this.direction = 'left';
+                break;
+            case 83: // 'S' key
+                this.velocity.y = this.yVelocity; // Move down
+                this.direction = 'down';
+                break;
+            case 68: // 'D' key
+                this.velocity.x = this.xVelocity; // Move right
+                this.direction = 'right';
+                break;
+        }
+    }
+
+    /**
+     * Handles key up events to stop the player's velocity when movement keys are released.
+     * 
+     * @param {Object} event - The keyup event object.
+     */
+    handleKeyUp({ keyCode }) {
+        switch (keyCode) {
+            case 87: // 'W' key
+            case 83: // 'S' key
+                this.velocity.y = 0; // Stop vertical movement
+                break;
+            case 65: // 'A' key
+            case 68: // 'D' key
+                this.velocity.x = 0; // Stop horizontal movement
+                break;
+        }
+    }
 }
+
+export default Player;
