@@ -18,40 +18,41 @@ class Player {
         // Initialize the player's scale based on the game environment
         this.scale = { width: GameEnv.innerWidth, height: GameEnv.innerHeight };
 
-        // Set up the turtle sprite data
+        // Set up the turtle sprite data with the new sprite sheet dimensions
         this.spriteData = {
-            src: 'images/rpg/turtle.png', // Path to turtle.png
-            pixels: { width: 72, height: 128 }, // Total width and height of the sprite sheet
-            orientation: { columns: 3, rows: 4 }, // 3 columns, 4 rows (24x32 frames)
-            directions: {
-                down: { start: 0, row: 0, columns: 3 },   // Down-facing animation frames
-                left: { start: 0, row: 1, columns: 3 },   // Left-facing animation frames
-                right: { start: 0, row: 2, columns: 3 },  // Right-facing animation frames
-                up: { start: 0, row: 3, columns: 3 },     // Up-facing animation frames
-            },
-            SCALE_FACTOR: 2,  // Scale factor for enlarging the sprite
-            STEP_FACTOR: STEP_FACTOR,  // Default step factor
-            ANIMATION_RATE: ANIMATION_RATE  // Animation speed
+            src: 'images/rpg/turtle.png',  // Path to the turtle.png sprite sheet
+            pixels: { width: 256, height: 280 },  // Size of the entire sprite sheet
+            orientation: { columns: 3, rows: 4 }, // 3x4 grid of frames
+            down: { start: 0, row: 0, columns: 3 },  // Row 0, 3 frames for "down" animation
+            left: { start: 0, row: 1, columns: 3 },  // Row 1, 3 frames for "left" animation
+            right: { start: 0, row: 2, columns: 3 }, // Row 2, 3 frames for "right" animation
+            up: { start: 0, row: 3, columns: 3 }     // Row 3, 3 frames for "up" animation
         };
 
-        // Override sprite data if provided
+        // Use provided data or fallback to default
         if (data) {
-            this.spriteData = { ...this.spriteData, ...data };
+            this.scaleFactor = data.SCALE_FACTOR || SCALE_FACTOR;
+            this.stepFactor = data.STEP_FACTOR || STEP_FACTOR;
+            this.animationRate = data.ANIMATION_RATE || ANIMATION_RATE;
+
+            // Load the sprite sheet
+            this.spriteSheet = new Image();
+            this.spriteSheet.src = data.src;
+
+            // Initialize animation properties
+            this.frameIndex = 0; // index reference to current frame
+            this.frameCounter = 0; // count each frame rate refresh
+            this.direction = 'down'; // Initial direction
+        } else {
+            this.scaleFactor = SCALE_FACTOR;
+            this.stepFactor = STEP_FACTOR;
+            this.animationRate = ANIMATION_RATE;
+            this.spriteSheet = new Image();
+            this.spriteSheet.src = this.spriteData.src;  // Load turtle.png
+            this.frameIndex = 0;
+            this.frameCounter = 0;
+            this.direction = 'down'; // Default to 'down' direction
         }
-
-        // Load the sprite sheet
-        this.spriteSheet = new Image();
-        this.spriteSheet.src = this.spriteData.src;
-
-        // Initialize animation properties
-        this.frameIndex = 0; // Index reference to the current frame
-        this.frameCounter = 0; // Counter to track animation frame rate
-        this.direction = 'down'; // Initial direction
-
-        // Set initial size and scale factors
-        this.scaleFactor = this.spriteData.SCALE_FACTOR || SCALE_FACTOR;
-        this.stepFactor = this.spriteData.STEP_FACTOR || STEP_FACTOR;
-        this.animationRate = this.spriteData.ANIMATION_RATE || ANIMATION_RATE;
 
         // Set the initial size of the player
         this.size = GameEnv.innerHeight / this.scaleFactor;
@@ -60,80 +61,68 @@ class Player {
         this.position = { x: 0, y: GameEnv.innerHeight - this.size };
         this.velocity = { x: 0, y: 0 };
 
-        // Set the player's width and height to match the frame size
-        this.frameWidth = this.spriteData.pixels.width / this.spriteData.orientation.columns; // 72 / 3 = 24
-        this.frameHeight = this.spriteData.pixels.height / this.spriteData.orientation.rows;  // 128 / 4 = 32
+        // Set the initial width and height based on the frame size
+        this.width = this.size;
+        this.height = this.size;
 
-        this.resize();
-
-        // Bind event listeners for player movement
+        // Bind event listeners to allow object movement
         this.bindEventListeners();
     }
 
     /**
-     * Resizes the player based on the game environment.
-     */
-    resize() {
-        const newScale = { width: GameEnv.innerWidth, height: GameEnv.innerHeight };
-
-        // Adjust the player's position proportionally
-        this.position.x = (this.position.x / this.scale.width) * newScale.width;
-        this.position.y = (this.position.y / this.scale.height) * newScale.height;
-
-        // Update the scale
-        this.scale = newScale;
-
-        // Recalculate the size and velocity
-        this.size = this.scale.height / this.scaleFactor;
-        this.xVelocity = this.scale.width / this.stepFactor;
-        this.yVelocity = this.scale.height / this.stepFactor;
-
-        // Set the player's width and height based on the frame size and scale factor
-        this.width = this.frameWidth * this.scaleFactor;
-        this.height = this.frameHeight * this.scaleFactor;
-    }
-
-    /**
      * Draws the player on the canvas.
+     * This method renders the player using the sprite sheet if provided, otherwise a red square.
      */
     draw() {
         if (this.spriteSheet) {
-            // Calculate the current frame coordinates in the sprite sheet
-            const directionData = this.spriteData.directions[this.direction];
-            const frameX = (directionData.start + this.frameIndex) * this.frameWidth;
-            const frameY = directionData.row * this.frameHeight;
+            // Calculate the frame size
+            const frameWidth = this.spriteData.pixels.width / this.spriteData.orientation.columns; // 256 / 3 = ~85.33
+            const frameHeight = this.spriteData.pixels.height / this.spriteData.orientation.rows;   // 280 / 4 = 70
 
-            // Draw the current frame of the sprite on the canvas
+            // Get the directional animation data
+            const directionData = this.spriteData[this.direction];
+
+            // Calculate the x and y position on the sprite sheet for the current frame
+            const frameX = (directionData.start + this.frameIndex) * frameWidth;
+            const frameY = directionData.row * frameHeight;
+
+            // Draw the current frame of the sprite sheet on the canvas
             GameEnv.ctx.drawImage(
                 this.spriteSheet,
-                frameX, frameY, this.frameWidth, this.frameHeight, // Source (sprite sheet)
-                this.position.x, this.position.y, this.width, this.height // Destination (canvas)
+                frameX, frameY, frameWidth, frameHeight,      // Source rectangle on the sprite sheet
+                this.position.x, this.position.y, this.width, this.height // Destination rectangle on the canvas
             );
 
-            // Increment frameCounter and update animation frame if needed
+            // Increment the frame counter and update the frame index if it's time to animate
             this.frameCounter++;
-            if (this.frameCounter >= this.animationRate) {
-                this.frameCounter = 0;
-                this.frameIndex = (this.frameIndex + 1) % directionData.columns; // Loop through frames
+            if (this.frameCounter % this.animationRate === 0) {
+                this.frameIndex = (this.frameIndex + 1) % directionData.columns; // Cycle through the frames
             }
         } else {
-            // Default to drawing a red square if no sprite is loaded
+            // Draw a red square as a fallback if the sprite sheet isn't loaded
             GameEnv.ctx.fillStyle = 'red';
             GameEnv.ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
         }
     }
 
     /**
-     * Updates the player's position and ensures it stays within canvas boundaries.
+     * Updates the player's position and ensures it stays within the canvas boundaries.
      */
     update() {
-        this.draw();
+        this.draw();  // First, draw the player
 
-        // Update position based on velocity
+        // Update the position based on the velocity
         this.position.x += this.velocity.x;
         this.position.y += this.velocity.y;
 
-        // Ensure player stays within canvas boundaries
+        // Ensure the player stays within the canvas boundaries
+        this.stayWithinCanvas();
+    }
+
+    /**
+     * Ensures the player stays within the canvas boundaries.
+     */
+    stayWithinCanvas() {
         if (this.position.y + this.height > GameEnv.innerHeight) {
             this.position.y = GameEnv.innerHeight - this.height;
             this.velocity.y = 0;
@@ -161,13 +150,11 @@ class Player {
     }
 
     handleKeyDown({ keyCode }) {
-        // Movement logic here (e.g., arrow keys to move and set direction)
-        throw new Error('Method "handleKeyDown()" must be implemented');
+        // Handle key press events here (example: arrow keys for movement)
     }
 
     handleKeyUp({ keyCode }) {
-        // Stop movement logic here
-        throw new Error('Method "handleKeyUp()" must be implemented');
+        // Handle key release events here
     }
 }
 
