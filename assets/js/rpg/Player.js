@@ -75,8 +75,11 @@ class Player {
         // Set the initial size of the player
         this.size = GameEnv.innerHeight / this.scaleFactor;
 
-        // Initialize the player's position and velocity
-        this.position = { x: 0, y: GameEnv.innerHeight - this.size };
+        // Initialize the player's position in the middle of the canvas
+        this.position = { 
+            x: (GameEnv.innerWidth - this.size) / 2, // Center horizontally
+            y: (GameEnv.innerHeight - this.size) / 2 // Center vertically
+        };
         this.velocity = { x: 0, y: 0 };
 
         // Set the initial size and velocity of the player
