@@ -3,15 +3,6 @@ import GameEnv from './GameEnv.js';
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
-const spriteImage = new Image();
-spriteImage.src = 'images/rpg/turtle.png'; // Path to your sprite image
-
-let sprite = {
-    x: 100,
-    y: 300,
-    width: 50,  // Adjust this to match your sprite image's width
-    height: 50, // Adjust this to match your sprite image's height
-};
 
 let pellets = [];
 const pelletWidth = 10; // Diameter of the circle
