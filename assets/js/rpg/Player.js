@@ -8,8 +8,6 @@ let pellets = [];
 const pelletWidth = 10; // Diameter of the circle
 const pelletHeight = 10; // Diameter of the circle
 
-function drawSprite() {
-    ctx.drawImage(spriteImage, sprite.x, sprite.y, sprite.width, sprite.height);
 }
 
 function drawPellets() {
@@ -41,7 +39,6 @@ function shootPellet() {
 
 function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawSprite();
     drawPellets();
     updatePellets();
     requestAnimationFrame(gameLoop);
