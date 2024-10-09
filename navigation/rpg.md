@@ -9,13 +9,6 @@ permalink: /rpg/
 <script type="module">
     import GameControl from '{{site.baseurl}}/assets/js/rpg/GameControl.js';
 
-    //pellet data
-    const image_src = "{{site.baseurl}}/images/rpg/pellet.png";
-    const image_data = {
-        SCALE_FACTOR: 15,
-        STEP_FACTOR: 4000,
-        ANIMATION_RATE: 50, 
-        pixels: {height: 205, width: 183},
 
     // Background data
     const image_src = "{{site.baseurl}}/images/rpg/water.png";
