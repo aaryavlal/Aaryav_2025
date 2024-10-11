@@ -20,7 +20,7 @@ permalink: /rpg/
     // Sprite data
     const sprite_src = "{{site.baseurl}}/images/rpg/turtle.png";
     const sprite_data = {
-        SCALE_FACTOR: 10,
+        SCALE_FACTOR: 10, 
         STEP_FACTOR: 1000,
         ANIMATION_RATE: 50,
         pixels: {height: 280, width: 256},
@@ -30,15 +30,15 @@ permalink: /rpg/
         left: { start: 0, row: 3, columns: 3 },  // Row 1, 3 frames for "left" animation
         right: { start: 0, row: 1, columns: 3 } // Row 2, 3 frames for "right" animation
 
-    }; 
+    };  // ALL OF THIS CODE IS COMPLEX JSON OBJECTS AS IT HAS DIRECTION SPECIFIC ANIMATIONS
     
-    const sprite = {src: sprite_src, data: sprite_data};
+    const sprite = {src: sprite_src, data: sprite_data}; //JSON object
 
     // Assets for game
     //const assets = {}
     //const assets = {image: image}
     //const assets = {sprite: sprite}
-    const assets = {image: image, sprite: sprite}
+    const assets = {image: image, sprite: sprite} //JSOn object
 
     // Start game engine
     GameControl.start(assets);
