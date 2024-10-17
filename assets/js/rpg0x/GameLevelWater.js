@@ -75,10 +75,10 @@ class GameLevelWater {
 
     // List of objects defnitions for this level
     this.objects = [
-      { class: Background, data: image_data_water },
-      { class: PlayerOne, data: sprite_data_turtle },
+      { class: Background, data: image_data_grass },
+      { class: PlayerOne, data: sprite_data_main },
       { class: PlayerTwo, data: sprite_data_fish },
-      { class: NPC, data: sprite_data_frog }
+      { class: NPC, data: sprite_data_knight }
     ];
   }
 
