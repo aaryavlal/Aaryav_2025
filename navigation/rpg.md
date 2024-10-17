@@ -50,7 +50,7 @@ permalink: /rpg/
     //const assets = {}
     //const assets = {image: image}
     //const assets = {sprite: sprite}
-    const assets = {image: image, sprite: sprite} //JSOn object
+    const assets = {image: image, sprite: sprite} //JSON object
 
     // Start game engine
     GameControl.start(assets);
