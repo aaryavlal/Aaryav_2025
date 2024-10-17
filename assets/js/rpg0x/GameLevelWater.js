@@ -22,7 +22,7 @@ class GameLevelWater {
     const image_data_grass = {
         name: 'grass',
         src: image_src_grass,
-        pixels: {height: 580, width: 1038}
+        pixels: {height: 512, width: 386}
     };
 
     // Player 1 sprite data (turtle)
