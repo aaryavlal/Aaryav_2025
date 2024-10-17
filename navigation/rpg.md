@@ -33,11 +33,11 @@ permalink: /rpg/
     };  // ALL OF THIS CODE IS COMPLEX JSON OBJECTS AS IT HAS DIRECTION SPECIFIC ANIMATIONS
 
      // NPC sprite data (frog)
-    const sprite_src_npc = path + "/images/rpg/npc.png";
-    const sprite_data_npc = {
-        name: 'npc',
+    const sprite_src_knight = path + "/images/rpg/npc.png";
+    const sprite_data_knight = {
+        name: 'knight',
         src: sprite_src_npc,
-        SCALE_FACTOR: 16,  // Adjust this based on your scaling needs
+        SCALE_FACTOR: 5,  // Adjust this based on your scaling needs
         ANIMATION_RATE: 50,
         pixels: {height: 75, width: 129},
         INIT_POSITION: { x: (width / 2), y: (height / 2)},
