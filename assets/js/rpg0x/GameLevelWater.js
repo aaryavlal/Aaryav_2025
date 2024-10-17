@@ -18,23 +18,23 @@ class GameLevelWater {
     let height = GameEnv.innerHeight;
 
     // Background data
-    const image_src_water = path + "/images/rpg/water.png";
-    const image_data_water = {
-        name: 'water',
-        src: image_src_water,
+    const image_src_grass = path + "/images/rpg/grass.png";
+    const image_data_grass = {
+        name: 'grass',
+        src: image_src_grass,
         pixels: {height: 580, width: 1038}
     };
 
     // Player 1 sprite data (turtle)
-    const TURTLE_SCALE_FACTOR = 10;
-    const sprite_src_turtle = path + "/images/rpg/turtle.png";
-    const sprite_data_turtle = {
-        name: 'turtle',
-        src: sprite_src_turtle,
-        SCALE_FACTOR: TURTLE_SCALE_FACTOR,
+    const MAIN_SCALE_FACTOR = 10;
+    const sprite_src_main = path + "/images/rpg/main.png";
+    const sprite_data_main = {
+        name: 'main',
+        src: sprite_src_main,
+        SCALE_FACTOR: MAIN_SCALE_FACTOR,
         STEP_FACTOR: 1000,
         ANIMATION_RATE: 50,
-        INIT_POSITION: { x: 0, y: height - (height/TURTLE_SCALE_FACTOR) }, 
+        INIT_POSITION: { x: 0, y: height - (height/MAIN_SCALE_FACTOR) }, 
         pixels: {height: 280, width: 256},
         orientation: {rows: 4, columns: 3 },
         down: {row: 0, start: 0, columns: 3 },
@@ -61,16 +61,16 @@ class GameLevelWater {
     };
 
     // NPC sprite data (frog)
-    const sprite_src_frog = path + "/images/rpg/fishies.png";
-    const sprite_data_frog = {
-        name: 'npc',
-        src: sprite_src_frog,
-        SCALE_FACTOR: 16,  // Adjust this based on your scaling needs
+    const sprite_src_knight = path + "/images/rpg/npc.png";
+    const sprite_data_knight = {
+        name: 'knight',
+        src: sprite_src_knight,
+        SCALE_FACTOR: 9,  // Adjust this based on your scaling needs
         ANIMATION_RATE: 50,
-        pixels: {height: 256, width: 384},
+        pixels: {height: 75, width: 129},
         INIT_POSITION: { x: (width / 2), y: (height / 2)},
-        orientation: {rows: 8, columns: 12 },
-        down: {row: 0, start: 9, columns: 3 },  // This is the stationary npc, down is default 
+        orientation: { rows: 1, columns: 1 }, // Only one frame
+        down: { row: 0, start: 9, columns: 1 }  // This is the stationary npc, down is default 
     };
 
     // List of objects defnitions for this level
