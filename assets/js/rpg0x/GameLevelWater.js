@@ -68,9 +68,7 @@ class GameLevelWater {
         SCALE_FACTOR: 9,  // Adjust this based on your scaling needs
         ANIMATION_RATE: 50,
         pixels: {height: 75, width: 129},
-        INIT_POSITION: { x: (width / 2), y: (height / 2)},
-        orientation: { rows: 1, columns: 1 }, // Only one frame
-        down: { row: 0, start: 0, columns: 0 }  // This is the stationary npc, down is default 
+        INIT_POSITION: { x: (width / 2), y: (height / 2)}, 
     };
 
     // List of objects defnitions for this level
