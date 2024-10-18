@@ -37,10 +37,10 @@ class GameLevelWater {
         INIT_POSITION: { x: 0, y: height - (height/MAIN_SCALE_FACTOR) }, 
         pixels: {height: 280, width: 256},
         orientation: {rows: 4, columns: 3 },
-        down: {row: 0, start: 0, columns: 3 },
-        left: {row: 1, start: 0, columns: 3 },
-        right: {row: 2, start: 0, columns: 3 },
-        up: {row: 3, start: 0, columns: 3 },
+        up: { start: 0, row: 0, columns: 3 },     // Row 3, 3 frames for "up" animation
+        down: { start: 0, row: 2, columns: 3 },  // Row 0, 3 frames for "down" animation
+        left: { start: 0, row: 3, columns: 3 },  // Row 1, 3 frames for "left" animation
+        right: { start: 0, row: 1, columns: 3 } // Row 2, 3 frames for "right" animation
     };
 
     // Player 2 sprite data (fish)
