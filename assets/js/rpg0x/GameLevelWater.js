@@ -66,9 +66,11 @@ class GameLevelWater {
         name: 'knight',
         src: sprite_src_knight,
         SCALE_FACTOR: 9,  // Adjust this based on your scaling needs
-        ANIMATION_RATE: 50,
+        ANIMATION_RATE: 0,
         pixels: {height: 75, width: 129},
         INIT_POSITION: { x: (width / 2), y: (height / 2)}, 
+        orientation: {rows: 1, columns: 1 },
+        down: {row: 0, start: 0, columns: 1 },  // This is the stationary npc, down is default
     };
 
     // List of objects defnitions for this level
