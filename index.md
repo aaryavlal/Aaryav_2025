@@ -197,30 +197,32 @@ hide: true
 
 > Here is my progress through game coding, click to see these online
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+<div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; padding: 20px;">
     <a href="https://aaryavlal.github.io/Aaryav_2025/snake/" style="text-decoration: none;">
-        <div style="background-color: #00FF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+        <div style="background: linear-gradient(135deg, #32CD32, #00FF7F); color: black; padding: 15px 30px; border-radius: 50px; font-weight: bold; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s, box-shadow 0.3s;">
             Snake Game
         </div>
     </a>
     <a href="{{}}/rpg/dot0" style="text-decoration: none;">
-        <div style="background-color: #FF0000; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+        <div style="background: linear-gradient(135deg, #FF4500, #FF0000); color: white; padding: 15px 30px; border-radius: 50px; font-weight: bold; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s, box-shadow 0.3s;">
             Zombie v0.0
         </div>
     </a>
     <a href="https://aaryavlal.github.io/Aaryav_2025/rpg/" style="text-decoration: none;">
-    <div style="background-color: #FF8800; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
-        Zombie v0.1
-    </div>
-</a>
-
- <a href="https://aaryavlal.github.io/Aaryav_2025/rpg0x/" style="text-decoration: none;">
-        <div style="background-color: #FFFF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+        <div style="background: linear-gradient(135deg, #FFA500, #FF8C00); color: white; padding: 15px 30px; border-radius: 50px; font-weight: bold; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s, box-shadow 0.3s;">
+            Zombie v0.1
+        </div>
+    </a>
+    <a href="https://aaryavlal.github.io/Aaryav_2025/rpg0x/" style="text-decoration: none;">
+        <div style="background: linear-gradient(135deg, #FFD700, #FFFF00); color: black; padding: 15px 30px; border-radius: 50px; font-weight: bold; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s, box-shadow 0.3s;">
             Zombie v0.2
         </div>
     </a>
 </div>
 
-<br>
-
-
+<style>
+    a div:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    }
+</style>
