@@ -197,24 +197,24 @@ hide: true
 
 > Here is my progress through game coding, click to see these online
 
-<div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; padding: 20px;">
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 30px;">
     <a href="https://aaryavlal.github.io/Aaryav_2025/snake/" style="text-decoration: none;">
-        <div style="background: linear-gradient(135deg, #32CD32, #00FF7F); color: black; padding: 15px 30px; border-radius: 50px; font-weight: bold; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s, box-shadow 0.3s;">
+        <div style="background: linear-gradient(135deg, #6A00F4, #A557FF); color: white; padding: 20px 40px; border-radius: 50px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
             Snake Game
         </div>
     </a>
     <a href="{{}}/rpg/dot0" style="text-decoration: none;">
-        <div style="background: linear-gradient(135deg, #FF4500, #FF0000); color: white; padding: 15px 30px; border-radius: 50px; font-weight: bold; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s, box-shadow 0.3s;">
+        <div style="background: linear-gradient(135deg, #FF004C, #FF7373); color: white; padding: 20px 40px; border-radius: 50px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
             Zombie v0.0
         </div>
     </a>
     <a href="https://aaryavlal.github.io/Aaryav_2025/rpg/" style="text-decoration: none;">
-        <div style="background: linear-gradient(135deg, #FFA500, #FF8C00); color: white; padding: 15px 30px; border-radius: 50px; font-weight: bold; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s, box-shadow 0.3s;">
+        <div style="background: linear-gradient(135deg, #FF8300, #FFB366); color: white; padding: 20px 40px; border-radius: 50px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
             Zombie v0.1
         </div>
     </a>
     <a href="https://aaryavlal.github.io/Aaryav_2025/rpg0x/" style="text-decoration: none;">
-        <div style="background: linear-gradient(135deg, #FFD700, #FFFF00); color: black; padding: 15px 30px; border-radius: 50px; font-weight: bold; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s, box-shadow 0.3s;">
+        <div style="background: linear-gradient(135deg, #00D084, #7EFFC1); color: white; padding: 20px 40px; border-radius: 50px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
             Zombie v0.2
         </div>
     </a>
@@ -222,7 +222,38 @@ hide: true
 
 <style>
     a div:hover {
-        transform: translateY(-5px);
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.5);
+    }
+</style>
+
+<br>
+
+### College Articulation
+
+> Here is my preparation for college topics, click to review my blogs
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 30px;">
+    <a href="https://github.com/aaryavlal/Aaryav_2025/blob/main/_notebooks/Foundation/fundamentals/variables.ipynb" style="text-decoration: none;">
+        <div style="background: linear-gradient(135deg, #000000, #434343); color: white; padding: 20px 40px; border-radius: 40px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
+            Variables I/O
+        </div>
+    </a>
+    <a href="https://github.com/aaryavlal/Aaryav_2025/blob/main/_notebooks/Foundation/fundamentals/dataOperations.ipynb" style="text-decoration: none;">
+        <div style="background: linear-gradient(135deg, #FF0040, #FF7373); color: white; padding: 20px 40px; border-radius: 40px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
+            Data Types
+        </div>
+    </a>
+    <a href="https://github.com/aaryavlal/Aaryav_2025/issues/8" style="text-decoration: none;">
+        <div style="background: linear-gradient(135deg, #000000, #434343); color: white; padding: 20px 40px; border-radius: 40px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
+            Variables I/O
+        </div>
+    </a>
+</div>
+
+<style>
+    a div:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.5);
     }
 </style>
