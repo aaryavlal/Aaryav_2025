@@ -9,21 +9,28 @@ permalink: /blogs/
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Description</title>
+    <title>Game Overview</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            background-color: #f0f0f0;
             color: #333;
+            margin: 0;
             padding: 20px;
         }
-        h1, h2, h3 {
-            text-align: center;
-            color: #2c3e50;
-        }
         h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #2c3e50;
             margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #2980b9;
+            margin-bottom: 15px;
+            text-transform: uppercase;
         }
         .section {
             background-color: #fff;
@@ -32,16 +39,14 @@ permalink: /blogs/
             margin-bottom: 30px;
             padding: 20px;
         }
-        .section h2 {
-            margin-bottom: 20px;
-            color: #16a085;
-        }
         ul {
-            list-style: none;
+            list-style-type: none;
             padding-left: 0;
         }
         ul li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+            color: #34495e;
         }
         ul li::before {
             content: "•";
@@ -49,12 +54,26 @@ permalink: /blogs/
             font-weight: bold;
             display: inline-block;
             width: 1em;
+            margin-left: -1em;
         }
         .highlight {
-            background-color: #f1c40f;
+            background-color: #f39c12;
             padding: 3px 6px;
-            border-radius: 5px;
-            font-weight: bold;
+            border-radius: 4px;
+            color: white;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #7f8c8d;
         }
     </style>
 </head>
@@ -108,6 +127,10 @@ permalink: /blogs/
             <li>The background resembles grass from above.</li>
         </ul>
     </div>
+
+    <footer>
+        © 2024 Your Game Studio. All rights reserved.
+    </footer>
 
 </body>
 </html>
