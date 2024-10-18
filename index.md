@@ -198,7 +198,7 @@ hide: true
 > Here is my progress through game coding, click to see these online
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <a href="{{https://aaryavlal.github.io/Aaryav_2025/snake/}}/snake" style="text-decoration: none;">
+    <a href="https://aaryavlal.github.io/Aaryav_2025/snake/" style="text-decoration: none;">
         <div style="background-color: #00FF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
             Snake Game
         </div>
@@ -208,10 +208,21 @@ hide: true
             Zombie v0.0
         </div>
     </a>
-    <a href="{{https://aaryavlal.github.io/Aaryav_2025/rpg/}}/rpg/dot1" style="text-decoration: none;">
-        <div style="background-color: #FF8800; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
-            Zombie v0.1
+    <a href="https://aaryavlal.github.io/Aaryav_2025/rpg/" style="text-decoration: none;">
+    <div style="background-color: #FF8800; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+        Zombie v0.1
+    </div>
+</a>
+
+ <a href="https://aaryavlal.github.io/Aaryav_2025/rpg0x/" style="text-decoration: none;">
+        <div style="background-color: #FFFF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+            Zombie v0.2
         </div>
+    </a>
+</div>
+
+<br>
+
     </a>
     <a href="{{https://aaryavlal.github.io/Aaryav_2025/rpg0x/}}/rpg/dot2" style="text-decoration: none;">
         <div style="background-color: #FFFF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
