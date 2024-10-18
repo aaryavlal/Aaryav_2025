@@ -65,7 +65,7 @@ class GameLevelWater {
     const sprite_data_knight = {
         name: 'knight',
         src: sprite_src_knight,
-        SCALE_FACTOR: 16,  // Adjust this based on your scaling needs
+        SCALE_FACTOR: 9,  // Adjust this based on your scaling needs
         ANIMATION_RATE: 0,
         pixels: {height: 250, width: 129},
         INIT_POSITION: { x: (width / 2), y: (height / 2)}, 
