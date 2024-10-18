@@ -5,7 +5,6 @@ description: Home Page
 image: /images/mario_animation.png
 hide: true
 ---
-New kasm test xxx
 
 
 
@@ -194,37 +193,33 @@ New kasm test xxx
 </script>
 
 
+### Game Progress
+
+> Here is my progress through game coding, click to see these online
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="{{https://aaryavlal.github.io/Aaryav_2025/snake/}}/snake" style="text-decoration: none;">
+        <div style="background-color: #00FF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+            Snake Game
+        </div>
+    </a>
+    <a href="{{}}/rpg/dot0" style="text-decoration: none;">
+        <div style="background-color: #FF0000; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+            Zombie v0.0
+        </div>
+    </a>
+    <a href="{{https://aaryavlal.github.io/Aaryav_2025/rpg/}}/rpg/dot1" style="text-decoration: none;">
+        <div style="background-color: #FF8800; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+            Zombie v0.1
+        </div>
+    </a>
+    <a href="{{https://aaryavlal.github.io/Aaryav_2025/rpg0x/}}/rpg/dot2" style="text-decoration: none;">
+        <div style="background-color: #FFFF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+            Zombie v0.2
+        </div>
+    </a>
+</div>
+
+<br>
 
 
- 
-
-
-My journey starts here.
-Aaryav Lal
-
-### Investing in Your Technical Future 
-
-## Markdown samples 
-Using markdown from index.md. We are learning markdown. 
-
-
-
-
-Explore the Computer Science Pathway at Del Norte High School and invest in your technical skills. All Del Norte CompSci classes are designed to provide a real-world development experience. Class time includes tech talks (lectures), peer collaboration, communication with teachers, critical thinking while coding, and creativity in projects. Grading is focused on time invested, participation with peers, and engagement in learning.
-
-- Introduction to concepts and requirements by the teacher
-- Project-based learning with teacher support, performing Agile/Scrum development
-- Coding, frontend, backend, devops, version control and algorithmic thinking
-- Creativity, research, design, data structures, and utilizing ChatGPT
-- Performing team work, team communication and collaboration, peer reviews/grading
-- Focus on tehnical communications through project presentations and student led teaching
-- Grades are on projects, learnt concepts, and live reviews between student(s) and teacher
-
-<script src="https://utteranc.es/client.js"
-        repo="aaryavlal/Aaryav_2025"
-        issue-term="title"
-        label="blogpost-comment"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
