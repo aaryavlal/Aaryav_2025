@@ -223,14 +223,4 @@ hide: true
 
 <br>
 
-    </a>
-    <a href="{{https://aaryavlal.github.io/Aaryav_2025/rpg0x/}}/rpg/dot2" style="text-decoration: none;">
-        <div style="background-color: #FFFF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
-            Zombie v0.2
-        </div>
-    </a>
-</div>
-
-<br>
-
 
