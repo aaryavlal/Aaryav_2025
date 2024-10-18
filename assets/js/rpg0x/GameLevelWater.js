@@ -46,7 +46,7 @@ class GameLevelWater {
     // Player 2 sprite data (fish)
     const sprite_src_skeleton = path + "/images/rpg/skeleton.png";
     const sprite_data_skeleton = {
-        name: 'fish',
+        name: 'skeleton',
         src: sprite_src_skeleton,
         SCALE_FACTOR: 20,
         STEP_FACTOR: 400,
