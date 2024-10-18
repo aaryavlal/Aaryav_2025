@@ -229,9 +229,9 @@ hide: true
 
 <br>
 
-### College Articulation
+### Juypter Notebooks
 
-> Here is my preparation for college topics, click to review my blogs
+> Here is my preparation for sprint 2, click to review all notebooks
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 30px;">
     <a href="https://github.com/aaryavlal/Aaryav_2025/blob/main/_notebooks/Foundation/fundamentals/variables.ipynb" style="text-decoration: none;">
@@ -246,7 +246,7 @@ hide: true
     </a>
     <a href="https://github.com/aaryavlal/Aaryav_2025/issues/8" style="text-decoration: none;">
         <div style="background: linear-gradient(135deg, #000000, #434343); color: white; padding: 20px 40px; border-radius: 40px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
-            Variables I/O
+            Sprint 2 Hacks
         </div>
     </a>
 </div>
