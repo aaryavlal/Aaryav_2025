@@ -44,7 +44,7 @@ class GameLevelWater {
     };
 
     // Player 2 sprite data (fish)
-    const sprite_src_skeleton = path + "/images/rpg/skeleton.png";
+    const sprite_src_skeleton = path + "/images/skeleton.png";
     const sprite_data_skeleton = {
         name: 'skeleton',
         src: sprite_src_skeleton,
