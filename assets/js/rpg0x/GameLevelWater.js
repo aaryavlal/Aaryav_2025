@@ -43,22 +43,23 @@ class GameLevelWater {
         right: { start: 0, row: 1, columns: 3 } // Row 2, 3 frames for "right" animation
     };
 
-    // Player 2 sprite data (fish)
+    // Player 2 sprite data (skeleton)
     const sprite_src_skeleton = path + "/images/skeleton.png";
     const sprite_data_skeleton = {
-        name: 'skeleton',
-        src: sprite_src_skeleton,
-        SCALE_FACTOR: 20,
-        STEP_FACTOR: 400,
-        ANIMATION_RATE: 50,
-        pixels: {height: 129, width: 240},
-        INIT_POSITION: { x: 0, y: 0 },
-        orientation: {rows: 4, columns: 3 },
-        down: {row: 3, start: 0, columns: 3 },  // 1st row
-        left: {row: 4, start: 0, columns: 3 },  // 2nd row
-        right: {row: 2, start: 0, columns: 3 }, // 3rd row
-        up: {row: 1, start: 0, columns: 3 },    // 4th row
+      name: 'skeleton',
+      src: sprite_src_skeleton,
+      SCALE_FACTOR: 20,               // Scale the sprite by this factor
+      STEP_FACTOR: 400,               // Speed or step factor for movement
+      ANIMATION_RATE: 50,             // Rate of animation
+      pixels: { height: 129, width: 240 }, // Dimensions of a single frame in the sprite sheet
+      INIT_POSITION: { x: 0, y: 0 },  // Initial position on the canvas or grid
+      orientation: { rows: 4, columns: 3 }, // Number of rows and columns in the sprite sheet
+      down: { row: 3, start: 0, columns: 3 },  // 4th row (index 3)
+      left: { row: 2, start: 0, columns: 3 },  // 3rd row (index 2)
+      right: { row: 1, start: 0, columns: 3 }, // 2nd row (index 1)
+      up: { row: 0, start: 0, columns: 3 }     // 1st row (index 0)
     };
+
 
     // NPC sprite data (frog)
     const sprite_src_knight = path + "/images/rpg/npc.png";
