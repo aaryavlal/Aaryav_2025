@@ -44,12 +44,12 @@ class GameLevelWater {
     };
 
     // Player 2 sprite data (skeleton)
-    const sprite_src_skeleton = path + "/images/skeleton.png";
+    const sprite_src_skeleton = path + "/images/rpg/skeleton.png";
     const sprite_data_skeleton = {
       name: 'skeleton',
       src: sprite_src_skeleton,
       SCALE_FACTOR: 20,               // Scale the sprite by this factor
-      STEP_FACTOR: 400,               // Speed or step factor for movement
+      STEP_FACTOR: 1000,               // Speed or step factor for movement
       ANIMATION_RATE: 50,             // Rate of animation
       pixels: { height: 129, width: 240 }, // Dimensions of a single frame in the sprite sheet
       INIT_POSITION: { x: 0, y: 0 },  // Initial position on the canvas or grid
