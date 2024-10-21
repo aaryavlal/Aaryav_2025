@@ -44,10 +44,10 @@ class GameLevelWater {
     };
 
    // Player 2 sprite data (skeleton)
-    const sprite_src_skeleton = path + "/images/rpg/skeleton.png";
-    const sprite_data_skeleton = {
+    const sprite_src_player2 = path + "/images/rpg/skeleton.png";
+    const sprite_data_player2 = {
         name: 'skeleton',
-        src: sprite_src_skeleton,
+        src: sprite_src_player2,
         SCALE_FACTOR: 20,               // Scale the sprite by this factor
         STEP_FACTOR: 400,               // Speed or step factor for movement
         ANIMATION_RATE: 50,             // Rate of animation
