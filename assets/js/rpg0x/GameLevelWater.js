@@ -51,7 +51,7 @@ class GameLevelWater {
       SCALE_FACTOR: 20,               // Scale the sprite by this factor
       STEP_FACTOR: 400,               // Speed or step factor for movement
       ANIMATION_RATE: 50,             // Rate of animation
-      pixels: { height: 32.25, width: 80 }, // Size of each frame (height and width)
+      pixels: { height: 240, width: 129 }, // Size of each frame (height and width)
       INIT_POSITION: { x: 0, y: 0 },  // Initial position on the canvas or grid
       orientation: { rows: 4, columns: 3 }, // Sprite sheet layout: 4 rows, 3 columns
       down: { row: 3, start: 0, columns: 3 },  // 4th row (index 3) for downward movement
