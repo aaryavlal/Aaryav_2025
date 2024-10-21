@@ -18,11 +18,11 @@ class GameLevelWater {
     let height = GameEnv.innerHeight;
 
     // Background data
-    const image_src_grass = path + "/images/rpg/grass.png";
-    const image_data_grass = {
-        name: 'grass',
-        src: image_src_grass,
-        pixels: {height: 512, width: 386}
+    const image_src_castle = path + "/images/rpg/castle.png";
+    const image_data_castle = {
+        name: 'castle',
+        src: image_src_castle,
+        pixels: {height: 720, width: 1280}
     };
 
     // Player 1 sprite data (turtle)
@@ -77,7 +77,7 @@ class GameLevelWater {
 
     // List of objects defnitions for this level
     this.objects = [
-      { class: Background, data: image_data_grass },
+      { class: Background, data: image_data_castle },
       { class: PlayerOne, data: sprite_data_main },
       { class: PlayerTwo, data: sprite_data_skeleton },
       { class: NPC, data: sprite_data_knight }
