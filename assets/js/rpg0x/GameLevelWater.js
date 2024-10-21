@@ -46,18 +46,18 @@ class GameLevelWater {
    // Player 2 sprite data (skeleton)
     const sprite_src_skeleton = path + "/images/rpg/skeleton.png";
     const sprite_data_skeleton = {
-      name: 'skeleton',
-      src: sprite_src_skeleton,
-      SCALE_FACTOR: 20,               // Scale the sprite by this factor
-      STEP_FACTOR: 400,               // Speed or step factor for movement
-      ANIMATION_RATE: 50,             // Rate of animation
-      pixels: { height: 240, width: 129 }, // Size of each frame (height and width)
-      INIT_POSITION: { x: 0, y: 0 },  // Initial position on the canvas or grid
-      orientation: { rows: 4, columns: 3 }, // Sprite sheet layout: 4 rows, 3 columns
-      down: { row: 3, start: 0, columns: 3 },  // 4th row (index 3) for downward movement
-      left: { row: 2, start: 0, columns: 3 },  // 3rd row (index 2) for left movement
-      right: { row: 1, start: 0, columns: 3 }, // 2nd row (index 1) for right movement
-      up: { row: 0, start: 0, columns: 3 }     // 1st row (index 0) for upward movement
+        name: 'skeleton',
+        src: sprite_src_skeleton,
+        SCALE_FACTOR: 20,               // Scale the sprite by this factor
+        STEP_FACTOR: 400,               // Speed or step factor for movement
+        ANIMATION_RATE: 50,             // Rate of animation
+        pixels: { height: 240, width: 129 }, // Size of each frame (height and width)
+        INIT_POSITION: { x: 0, y: 0 },  // Initial position on the canvas or grid
+        orientation: { rows: 4, columns: 3 }, // Sprite sheet layout: 4 rows, 3 columns
+        down: { row: 3, start: 0, columns: 3 },  // 4th row (index 3) for downward movement
+        left: { row: 2, start: 0, columns: 3 },  // 3rd row (index 2) for left movement
+        right: { row: 1, start: 0, columns: 3 }, // 2nd row (index 1) for right movement
+        up: { row: 0, start: 0, columns: 3 }     // 1st row (index 0) for upward movement
     };
 
 
