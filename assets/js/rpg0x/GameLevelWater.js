@@ -26,7 +26,7 @@ class GameLevelWater {
     };
 
     // Player 1 sprite data (turtle)
-    const MAIN_SCALE_FACTOR = 10;
+    const MAIN_SCALE_FACTOR = 16;
     const sprite_src_main = path + "/images/rpg/main.png";
     const sprite_data_main = {
         name: 'main',
@@ -48,7 +48,7 @@ class GameLevelWater {
     const sprite_data_skeleton = {
         name: 'skeleton',
         src: sprite_src_skeleton,
-        SCALE_FACTOR: 20,               // Scale the sprite by this factor
+        SCALE_FACTOR: 15,               // Scale the sprite by this factor
         STEP_FACTOR: 400,               // Speed or step factor for movement
         ANIMATION_RATE: 50,             // Rate of animation
         pixels: { height: 240, width: 129 }, // Size of each frame (height and width)
