@@ -44,10 +44,10 @@ class GameLevelWater {
     };
 
    // Player 2 sprite data (skeleton)
-    const sprite_src_player2 = path + "/images/rpg/skeleton.png";
-    const sprite_data_player2 = {
+    const sprite_src_skeleton = path + "/images/rpg/skeleton.png";
+    const sprite_data_skeleton = {
         name: 'skeleton',
-        src: sprite_src_player2,
+        src: sprite_src_skeleton,
         SCALE_FACTOR: 20,               // Scale the sprite by this factor
         STEP_FACTOR: 400,               // Speed or step factor for movement
         ANIMATION_RATE: 50,             // Rate of animation
@@ -79,7 +79,7 @@ class GameLevelWater {
     this.objects = [
       { class: Background, data: image_data_grass },
       { class: PlayerOne, data: sprite_data_main },
-      { class: PlayerTwo, data: sprite_data_fish },
+      { class: PlayerTwo, data: sprite_data_skeleton },
       { class: NPC, data: sprite_data_knight }
     ];
   }
