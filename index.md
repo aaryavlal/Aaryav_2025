@@ -270,7 +270,7 @@ hide: true
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 30px;">
     <a href="https://github.com/aaryavlal/Aaryav_2025/blob/main/_notebooks/Foundation/fundamentals/2023-09-21-game_animations-json-object.ipynb" style="text-decoration: none;">
         <div style="background: linear-gradient(135deg, #5A9BD5, #83C6FF); color: white; padding: 20px 40px; border-radius: 50px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
-            Sprite Hacks 
+            JSON object Hacks 
         </div>
     </a>
 </div>
