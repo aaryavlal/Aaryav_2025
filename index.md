@@ -256,7 +256,6 @@ hide: true
         transform: translateY(-10px) scale(1.05);
         box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.5);
     }
-</style>
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 30px;">
     <a href="https://github.com/aaryavlal/Aaryav_2025/blob/main/_notebooks/Foundation/fundamentals/2024-09-30-for_sprites.ipynb" style="text-decoration: none;">
