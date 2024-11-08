@@ -276,7 +276,7 @@ hide: true
 
 <div class="container">
         <a href="https://github.com/aaryavlal/Aaryav_2025/tree/main/_notebooks/Foundation/Mathematic_Expressions" style="text-decoration: none;">
-            <div style="background: linear-gradient(135deg, #FFD700, #FFEC8B); color: white; padding: 20px 40px; border-radius: 50px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
+            <div style="background: linear-gradient(135deg, #FFD700, #FFEC8B); color: white; padding: 15px 30px; border-radius: 50px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
                 Mathematical Expressions 
             </div>
         </a>
