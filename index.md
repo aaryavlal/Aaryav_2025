@@ -274,30 +274,13 @@ hide: true
     </a>
 </div>
 
+<div class="container">
+        <a href="https://github.com/aaryavlal/Aaryav_2025/tree/main/_notebooks/Foundation/Mathematic_Expressions" style="text-decoration: none;">
+            <div style="background: linear-gradient(135deg, #FFD700, #FFEC8B); color: white; padding: 20px 40px; border-radius: 50px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
+                Mathematical Expressions 
+            </div>
+        </a>
+    </div>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .styled-button {
-            background-color: #4CAF50; /* Green background */
-            border: none; /* Remove borders */
-            color: white; /* White text */
-            padding: 15px 32px; /* Some padding */
-            text-align: center; /* Center the text */
-            text-decoration: none; /* Remove underline */
-            display: inline-block; /* Make the link behave like a button */
-            font-size: 16px; /* Increase font size */
-            margin: 10px 2px; /* Add some margin */
-            cursor: pointer; /* Add a pointer cursor on hover */
-            border-radius: 8px; /* Rounded corners */
-        }
 
-        .styled-button:hover {
-          background-color: #45a049; /* Darker green on hover */
-        }
-    </style>
-  </head>
-  <body>
-  <a href="https://github.com/aaryavlal/Aaryav_2025/tree/main/_notebooks/Foundation/mathematic_expressions" class="styled-button">Mathematical Operators!</a> 
-  </body> 
-  </html>
+
