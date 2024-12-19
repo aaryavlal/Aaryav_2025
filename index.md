@@ -282,7 +282,13 @@ hide: true
         </a>
     </div>
 
-
+ <a href="https://aaryavlal.github.io/Aaryav_2025/sprintFour/" style="text-decoration: none;">
+            <div style="background: linear-gradient(135deg, #FFD700, #FFEC8B); color: white; padding: 15px 30px; border-radius: 50px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
+                Mathematical Expressions 
+            </div>
+        </a>
+    </div>
+    
 <script src="https://utteranc.es/client.js"
         repo="aaryavlal/Aaryav_2025"
         issue-term="title"
