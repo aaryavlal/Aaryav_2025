@@ -298,5 +298,17 @@ hide: true
         async>
 </script>
 
+### Platformer 4x Progress Blog
+> Click here to see my day to day progress on the platformer game
+### Game Progress
+
+> Here is my progress through game coding, click to see these online
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 30px;">
+    <a href="https://github.com/aaryavlal/Aaryav_2025/issues/17" style="text-decoration: none;">
+        <div style="background: linear-gradient(135deg, #6A00F4, #A557FF); color: white; padding: 20px 40px; border-radius: 50px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
+            Snake Game
+        </div>
+    </a>
 
 
