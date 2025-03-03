@@ -7,7 +7,6 @@ hide: true
 ---
 
 
-
 <!-- Liquid:  statements -->
 
 <!-- Include submenu from _includes to top of pages -->
@@ -220,16 +219,7 @@ hide: true
     </a>
 </div>
 
-<style>
-    a div:hover {
-        transform: translateY(-10px) scale(1.05);
-        box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.5);
-    }
-</style>
-
-<br>
-
-### Juypter Notebooks
+### Jupyter Notebooks
 
 > Here is my preparation for sprint 2, click to review all notebooks
 
@@ -251,20 +241,13 @@ hide: true
     </a>
 </div>
 
-<style>
-    a div:hover {
-        transform: translateY(-10px) scale(1.05);
-        box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.5);
-    }
-
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 30px;">
     <a href="https://github.com/aaryavlal/Aaryav_2025/blob/main/_notebooks/Foundation/fundamentals/2024-09-30-for_sprites.ipynb" style="text-decoration: none;">
         <div style="background: linear-gradient(135deg, #6A00F4, #A557FF); color: white; padding: 20px 40px; border-radius: 50px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
             Sprite Hacks 
         </div>
     </a>
-
-</style>
+</div>
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 30px;">
     <a href="https://github.com/aaryavlal/Aaryav_2025/blob/main/_notebooks/Foundation/fundamentals/2023-09-21-game_animations-json-object.ipynb" style="text-decoration: none;">
@@ -275,20 +258,19 @@ hide: true
 </div>
 
 <div class="container">
-        <a href="https://github.com/aaryavlal/Aaryav_2025/tree/main/_notebooks/Foundation/Mathematic_Expressions" style="text-decoration: none;">
-            <div style="background: linear-gradient(135deg, #FFD700, #FFEC8B); color: white; padding: 15px 30px; border-radius: 50px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
-                Mathematical Expressions 
-            </div>
-        </a>
-    </div>
+    <a href="https://github.com/aaryavlal/Aaryav_2025/tree/main/_notebooks/Foundation/Mathematic_Expressions" style="text-decoration: none;">
+        <div style="background: linear-gradient(135deg, #FFD700, #FFEC8B); color: white; padding: 15px 30px; border-radius: 50px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
+            Mathematical Expressions 
+        </div>
+    </a>
+</div>
 
- <a href="https://aaryavlal.github.io/Aaryav_2025/sprintFour/" style="text-decoration: none;">
-            <div style="background: linear-gradient(135deg, #FFD700, #FFEC8B); color: white; padding: 15px 30px; border-radius: 50px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
-                Mathematical Expressions 
-            </div>
-        </a>
-    </div>
-    
+### Platformer Related
+
+> Click on these to view progress related to the platformer game!
+
+
+
 <script src="https://utteranc.es/client.js"
         repo="aaryavlal/Aaryav_2025"
         issue-term="title"
@@ -298,24 +280,9 @@ hide: true
         async>
 </script>
 
-### Game Progress
-
-> Here is my progress through game coding, click to see these online
-
-<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 30px;">
-    <a href="https://github.com/aaryavlal/Aaryav_2025/issues/17" style="text-decoration: none;">
-        <div style="background: linear-gradient(135deg, #6A00F4, #A557FF); color: white; padding: 20px 40px; border-radius: 50px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
-            Snake Game
-        </div>
-    </a>
-
-### Platformer 4x Progress Blog
-
-> Click here to see my day to day progress on the platformer game
-
-<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 30px;">
-    <a href="https://github.com/aaryavlal/Aaryav_2025/issues/17" style="text-decoration: none;">
-        <div style="background: linear-gradient(135deg, #6A00F4, #A557FF); color: white; padding: 20px 40px; border-radius: 50px; font-weight: bold; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); transition: transform 0.4s, box-shadow 0.4s;">
-            Snake Game
-        </div>
-    </a>
+<style>
+    a div:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.5);
+    }
+</style>
